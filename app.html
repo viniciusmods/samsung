@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+      rel="stylesheet"
+  href="https://4444565.hexat.com/ui.css"
+    />
+    <title>Modal Example</title>
+    <style>
+        #overlayt {
+            background-color: rgb(246, 246, 246) !important;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 99999999999999 !important;
+            display: none;
+        
+        }
+      .c-app-colour-palette__settings__darker_icon, .c-app-colour-palette__settings__icon, .c-app-colour-palette__settings__text {
+    --tw-text-opacity: 1;
+    color: black !important;
+}
+    </style>
+</head>
+<body>
+  <button id="topButton">ok</button>
+    <div id="overlay" class="overlay"></div>
+    <div class="modal">
+        <div class="modal-header">
+            <div class="modal-title">Confirmação</div>
+        </div>
+        <div class="modal-body">
+            <div class="modal-text"></div>
+            
+        </div>
+        <div class="modal-footjer">
+            <button id="yesBtn" class="modal-button">Sim</button>
+        </div>
+    </div>
+    <script>
+        var buttons = ['topButton', 'topButton', 'bottomButton', 'bottomButton', 'bottomButton'];
+        var currentButtonIndex = 0;
+        function checkButtons() {
+            if (document.getElementById(buttons[currentButtonIndex])) {
+                document.getElementById('overlay').style.display = 'block';
+                document.querySelector('.modal-text').textContent = 'Você deseja clicar no botão ' + (currentButtonIndex + 1) + '?';
+            } else {
+                document.getElementById('overlay').style.display = 'none';
+            }
+        }
+        document.getElementById('yesBtn').addEventListener('click', function() {
+            document.getElementById(buttons[currentButtonIndex]).click();
+            var count = 13;
+            var countdown = setInterval(function() {
+                document.querySelector('.modal-text').textContent = 'Aguardando ' + count + ' segundos...';
+                count--;
+                if (count < 0) {
+                    clearInterval(countdown);
+                    currentButtonIndex++;
+                    checkButtons();
+                }
+            }, 1300);
+        });
+        checkButtons();
+    </script>  
+
+
+
+           <colab-run-button title="Executar célula (Ctrl+Enter)
+a célula não foi executada nesta sessão
+
+última execução: horário desconhecido"></colab-run-button>
+    <div id="overlayt">
+     
+ <div class="gpu absolute inset-0 hidden overflow-y-auto overflow-x-hidden" data-ref="app-settings-auto-blocker-item" style="bottom: 80px; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); display: block;">
+  <div class="c-app-colour-palette__settings__background sticky top-0 z-20 py-2 pb-3 pt-10">
+    <div class="relative px-6 py-2">
+      <div class="flex-no-wrap flex items-center justify-between">
+        <div class="oflex-no-wrap flex items-center">
+          
+          <div class="text-2xl">
+            <div class="c-app-colour-palette__settings__text flex-no-wrap flex items-center justify-start font-semibold leading-none" style="font-size: 1.375rem;">
+              <div>Remasterize v1.0</div>
+            </div>
+          </div>
+        </div>
+        <button class="c-app-colour-palette__settings__text flex h-[24px] w-[24px] items-center justify-center text-center"></button>
+      </div>
+    </div>
+  </div>
+  <div class="relative w-full py-2">
+    <div class="bg-white relative mb-5" style="border-radius: 2rem;">
+      <div>
+        <div class="relative flex items-center justify-between px-6">
+          <div class="relative w-full py-3.5 ltr:text-left rtl:text-right text-black">
+            <div class="text-xl font-semibold">Iniciar</div>
+          </div>
+          
+          
+          
+          
+          
+          
+          
+          
+         
+          
+          
+          <md-outlined-text-field class="flex" placeholder="Inserir text aqui" value="/content/out.mp4" data-aria-label="video_path" inputmode="" type="text" autocomplete="">
+      </md-outlined-text-field>
+          
+          
+          
+          
+          
+          
+          
+          <div>
+            <label class="relative block h-[24px] w-[42px] shrink-0 rtl:-scale-x-100 rtl:transform">
+              <input type="checkbox" class="h-0 w-0 opacity-0">
+              <span class="absolute inset-0 block rounded-3xl transition before:absolute before:bottom-0.5 before:left-0.5 before:h-[20px] before:w-[20px] before:rounded-3xl before:bg-white before:transition before:content-[''] bg-gray-400"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="mb-4 px-6 ltr:text-left rtl:text-right">
+      <p class="mb-3 text-gray-600">O Bloqueador automático mantém seu celular seguro bloqueando ameaças e outras atividades suspeitas</p>
+      <h3 class="font-bold">Aplicativos de bloqueio de fontes não autorizadas</h3>
+      <div class="mb-3 text-gray-600">Somente aplicativos de fontes autorizadas podem ser instalados. <div class="inline-block"><div class="inline-block"><span class="underline">Saiba mais</span></div></div></div>
+      <h3 class="font-bold">Ativa as verificações de segurança do aplicativo</h3>
+      <div class="mb-3 text-gray-600">Os aplicativos instalados no seu celular serão verificados contra atividades maliciosas. <div class="inline-block"><div class="inline-block"><span class="underline">Saiba mais</span></div></div></div>
+      <h3 class="font-bold">Bloqueia comandos via cabo USB</h3>
+      <p class="mb-3 text-gray-600">Carregadores, computadores e outros dispositivos maliciosos não poderão enviar comandos para o seu celular quando conectados usando um cabo USB.</p>
+    </div>
+    <div class="opacity-40">
+      <div class="px-6 pb-2.5 text-sm font-medium text-primary-gray-225 ltr:text-left rtl:text-right">Avançado</div>
+      <div class="relative mb-5 bg-white" style="border-radius: 2rem;">
+        <div>
+          <div class="relative flex items-center justify-between px-6">
+            <div class="relative w-full py-3.5 text-black ltr:text-left rtl:text-right">
+              <div class="text-xl">Proteção de aplicativos de mensagens</div>
+              <div class="text-sm leading-4 text-primary-gray-350 ltr:mr-6 rtl:ml-6">Bloqueia imagens suspeitas de conter malware em aplicativos de mensagens.</div>
+            </div>
+            <label class="relative block h-[24px] w-[42px] shrink-0 rtl:-scale-x-100 rtl:transform">
+              <input type="checkbox" class="h-0 w-0 opacity-0">
+              <span class="absolute inset-0 block rounded-3xl transition before:absolute before:bottom-0.5 before:left-0.5 before:h-[20px] before:w-[20px] before:rounded-3xl before:bg-white before:transition before:content-[''] bg-gray-400"></span>
+            </label>
+          </div>
+        </div>
+        <div class="relative px-6 opacity-20">
+          <div class="w-full bg-primary-gray-150" style="height: 1px;"></div>
+        </div>
+        <div>
+          <div class="relative flex items-center justify-between px-6">
+            <div class="relative w-full py-3.5 text-black ltr:text-left rtl:text-right">
+              <div class="text-xl">Bloqueio de atualizações de software por cabo USB</div>
+              <div class="text-sm leading-4 text-primary-gray-350 ltr:mr-6 rtl:ml-6">Previne a instalação de software de sistema usando um cabo USB. Isso pode prevenir alguém com acesso físico ao seu celular de instalar software malicioso sem seu conhecimento.</div>
+            </div>
+            <label class="relative block h-[24px] w-[42px] shrink-0 rtl:-scale-x-100 rtl:transform">
+              <input type="checkbox" class="h-0 w-0 opacity-0">
+              <span class="absolute inset-0 block rounded-3xl transition before:absolute before:bottom-0.5 before:left-0.5 before:h-[20px] before:w-[20px] before:rounded-3xl before:bg-white before:transition before:content-[''] bg-gray-400"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+     
+      
+        <div id="modal" class="modal">
+        
+            <input class="input" aria-label="video_path" placeholder="Inserir texto aqui" type="text">
+            <button class="modal-button">Sim</button>
+        </div>
+    </div>
+    <script>
+        var overlay = document.getElementById('overlay');
+        var modalInput = document.querySelector('.input');
+        var confirmButton = document.querySelector('.modal-button');
+        var checkExist = setInterval(function() {
+            var externalInput = document.querySelector('md-outlined-text-field[data-aria-label="video_path"]');
+            var sysRunButton = document.querySelector('colab-run-button[title*="Executar célula"]');
+            if (externalInput && sysRunButton) {
+                clearInterval(checkExist);
+                modalInput.addEventListener('input', function() {
+                    externalInput.setAttribute('value', modalInput.value);
+                });
+                overlay.style.display = 'flex';
+                confirmButton.addEventListener('click', function() {
+                    sysRunButton.click();
+                });
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
